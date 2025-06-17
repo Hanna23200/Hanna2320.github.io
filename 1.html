@@ -174,9 +174,20 @@
   <p>กรุณากรอกข้อมูลของคุณเพื่อเริ่มการทำนาย</p>
 
   <!-- Form to enter name and birthdate -->
-  <form id="horoscopeForm">
+  <form id="horoscopeForm"> 
+    
+    <P>
+  <h4>กรุณากรอกข้อมูลวันเดือนปีเกิด</h4>
+</P>
+    <input type="date" id="dob" required   >
+
+<P>
+  <h4>กรุณากรอกข้อมูล ชื่อ นามสกุล</h4>
+</P>
     <input type="text" id="name" placeholder="ชื่อของคุณ" required><br><br>
-    <input type="date" id="dob" placeholder="วันเดือนปีเกิด" required><br><br>
+
+	  
+	  <br><br>
     <button type="button" onclick="startPrediction()">เริ่มทำนาย</button>
   </form>
 	
