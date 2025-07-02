@@ -225,32 +225,31 @@
 								"The Fool (ผู้ไร้เดียงสา)ความหมาย: ไพ่ The Fool แสดงถึงการเริ่มต้นใหม่ การเปิดโอกาสให้ตัวเองเติบโตและเรียนรู้จากสิ่งใหม่ๆ มันเป็นสัญลักษณ์ของความกล้าที่จะก้าวไปข้างหน้าอย่างไม่กลัวสิ่งที่ไม่รู้จักในชีวิตประจำวัน: เป็นสัญญาณของการเริ่มต้นใหม่ หรือการเปิดรับโอกาสใหม่ๆ ในชีวิต เช่น เริ่มต้นการทำงานใหม่ การเดินทาง หรือการลองทำสิ่งที่ไม่เคยทำมาก่อน",
     ];
 
-    // Function to start the prediction
+    // แก้ไขแล้ว ✅ ตรวจสอบข้อมูลก่อนทำนาย
     function startPrediction() {
-      // Show loading message
+      const name = document.getElementById('name').value.trim();
+      const dob = document.getElementById('dob').value.trim();
+
+      if (!name || !dob) {
+        alert('กรุณากรอกชื่อและวันเดือนปีเกิดให้ครบถ้วน');
+        return;
+      }
+
       document.getElementById('loadingMessage').style.display = 'block';
 
-      // Simulate a delay before showing the result
-      setTimeout(function() {
-        // Hide loading message
+      setTimeout(function () {
         document.getElementById('loadingMessage').style.display = 'none';
-
-        // Show random tarot card
         const randomCard = tarotCards[Math.floor(Math.random() * tarotCards.length)];
         document.getElementById('result').innerText = randomCard;
-
-        // Show modal with result
         document.getElementById("myModal").style.display = "block";
-      }, 5000); // Simulate a 2-second delay
+      }, 5000);
     }
 
-    // Function to close modal
     function closeModal() {
       document.getElementById("myModal").style.display = "none";
     }
 
-    // Close modal when clicking outside the modal content
-    window.onclick = function(event) {
+    window.onclick = function (event) {
       if (event.target == document.getElementById("myModal")) {
         closeModal();
       }
