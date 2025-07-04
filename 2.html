@@ -226,32 +226,33 @@
 								 "The Lovers (ความรัก):ไพ่ The Lovers เป็นไพ่ที่มีความเกี่ยวข้องกับความรักโดยตรงและเป็นสัญลักษณ์ของการตัดสินใจในความสัมพันธ์ มักจะหมายถึงการเลือกระหว่างสองทางเลือกในเรื่องของความรักหรือการมีความสัมพันธ์ที่ลึกซึ้งและมีการตัดสินใจร่วมกัน ไพ่ใบนี้อาจแสดงถึงความรักที่มีความหมายและสัมพันธ์ที่มีความเข้าใจซึ่งกันและกันความหมาย: ความรักที่แท้จริง, การตัดสินใจในความสัมพันธ์, ความสัมพันธ์ที่มีความสมดุล"
 								];
 
-    // Function to start the prediction
+   // แก้ไขแล้ว ✅ ตรวจสอบข้อมูลก่อนทำนาย
     function startPrediction() {
-      // Show loading message
+      const name = document.getElementById('name').value.trim();
+      const dob = document.getElementById('dob').value.trim();
+
+      
+
+      if (!name || !dob) {
+        alert('กรุณากรอกชื่อและวันเดือนปีเกิดให้ครบถ้วน');
+        return;
+      }
+
       document.getElementById('loadingMessage').style.display = 'block';
 
-      // Simulate a delay before showing the result
-      setTimeout(function() {
-        // Hide loading message
+      setTimeout(function () {
         document.getElementById('loadingMessage').style.display = 'none';
-
-        // Show random tarot card
         const randomCard = tarotCards[Math.floor(Math.random() * tarotCards.length)];
         document.getElementById('result').innerText = randomCard;
-
-        // Show modal with result
         document.getElementById("myModal").style.display = "block";
-      }, 5000); // Simulate a 2-second delay
+      }, 5000);
     }
 
-    // Function to close modal
     function closeModal() {
       document.getElementById("myModal").style.display = "none";
     }
 
-    // Close modal when clicking outside the modal content
-    window.onclick = function(event) {
+    window.onclick = function (event) {
       if (event.target == document.getElementById("myModal")) {
         closeModal();
       }
