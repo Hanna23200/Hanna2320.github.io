@@ -1,133 +1,33 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="th">
 
 <head>
-		<title>Horoscope</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
-
-		<!-- Header -->
-	
-			<header id="header">
-        
-				 <a href="index.html" class="title">HOME</a>
-        &nbsp;                   <a href="index.html" class="title">horoscope</a> 
-	 
-			          </header>
-			
-
-
-			
-		<!-- Wrapper -->
-			<div id="wrapper">
-
-				<!-- Main -->
-					<section id="main" class="wrapper">
-						<div class="inner">
-							<h1 class="major">ดูดวงรายวัน </h1>
-
-							<!DOCTYPE html>
-							<html lang="th">
-							<head>
-							  <meta charset="UTF-8">
-							  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-							  <title>การดูดวงไพ่ทาโร่ต์</title>
-							  <style>
-								body {
-								  font-family: Arial, sans-serif;
-								  text-align: center;
-								  padding: 50px;
-								  background-color: #2e1160;
-								}
-								button {
-								  padding: 10px 20px;
-								  font-size: 16px;
-								  background-color: #4CAF50;
-								  color: rgb(238, 208, 208);
-								  border: none;
-								  cursor: pointer;
-								  margin-top: 20px;
-								}
-								button:hover {
-								  background-color: #45a049;
-								}
-							
-								/* สไตล์ของ Modal */
-								.modal {
-								  display: none; /* เริ่มต้นไม่ให้แสดง */
-								  position: fixed; /* อยู่ตำแหน่งคงที่ */
-								  z-index: 1; /* ทำให้ Modal อยู่ด้านบนสุด */
-								  left: 0;
-								  top: 0;
-								  width: 100%;
-								  height: 100%;
-								  background-color: rgba(0, 0, 0, 0.4); /* พื้นหลังมืด */
-								  overflow: auto;
-								  padding-top: 60px;
-								}
-							
-								/* สไตล์ของ Modal Content */
-								.modal-content {
-								  background-color: #511c5e;
-								  margin: 5% auto;
-								  padding: 20px;
-								  border: 1px solid #adbc5a;
-								  width: 80%;
-								  max-width: 500px;
-								}
-							
-								/* ปุ่มปิด */
-								.close {
-								  color: #aaa;
-								  float: right;
-								  font-size: 28px;
-								  font-weight: bold;
-								}
-							
-								.close:hover,
-								.close:focus {
-								  color: black;
-								  text-decoration: none;
-								  cursor: pointer;
-								}
-							  </style>
-							  
-							</head>
-
-
-
-
-
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
   <title>Horoscope</title>
+  <link rel="stylesheet" href="assets/css/main.css" />
   <style>
     body {
       font-family: Arial, sans-serif;
+      background-color: #2e1160;
+      color: white;
       text-align: center;
-      padding: 50px;
-      background-color: #160536;
     }
+
     button {
-      padding: 4px 20px;
-      font-size: 11px;
+      padding: 10px 20px;
+      font-size: 16px;
       background-color: #d529d5;
       color: white;
       border: none;
       cursor: pointer;
       margin-top: 20px;
     }
+
     button:hover {
       background-color: #f01a29;
     }
 
-    /* Modal styles */
     .modal {
       display: none;
       position: fixed;
@@ -159,62 +59,63 @@
 
     .close:hover,
     .close:focus {
-      color: black;
-      text-decoration: none;
+      color: white;
       cursor: pointer;
     }
 
     .loading {
       display: none;
-      font-size: 20px;
-      color: rgb(216, 88, 150);
+      font-size: 18px;
+      color: #f0c;
       margin-top: 20px;
     }
   </style>
 </head>
-<body>
 
-  <h2>การดูดวงไพ่ทาโร่ต์</h2>
-  <p>กรุณากรอกข้อมูลของคุณเพื่อเริ่มการทำนาย</p>
+<body class="is-preload">
 
-  <!-- Form to enter name and birthdate -->
-  <form id="horoscopeForm"> 
-    
-    <P>
-  <h4>กรุณากรอกข้อมูลวันเดือนปีเกิด</h4>
-</P>
-    <input type="date" id="dob" required   >
+  <!-- Header -->
+  <header id="header">
+    <a href="index.html" class="title">HOME</a>
+    &nbsp;&nbsp;
+    <a href="index.html" class="title">Horoscope</a>
+  </header>
 
-<P>
-  <h4>กรุณากรอกข้อมูล ชื่อ นามสกุล</h4>
-</P>
-    <input type="text" id="name" placeholder="ชื่อของคุณ" required><br><br>
+  <!-- Main Wrapper -->
+  <div id="wrapper">
+    <section id="main" class="wrapper">
+      <div class="inner">
+        <h1 class="major">ดูดวงรายวัน</h1>
 
-	  
-	  <br><br>
-    <button type="button" onclick="startPrediction()">เริ่มทำนาย</button>
-  </form>
-	
-<div class="loading" id="loadingMessage">ตั้งจิตอธิษฐานให้มั่น กำลังทำนาย... โปรดรอสักครู่ </div>
-  <li><a href="elements.html">ท่านสามารถสนับสนุนเราได้</a></li>
+        <p>กรุณากรอกข้อมูลของคุณเพื่อเริ่มการทำนาย</p>
+        <form id="horoscopeForm">
+          <p><strong>วันเดือนปีเกิด:</strong></p>
+          <input type="date" id="dob" required><br>
+          <p><strong>ชื่อ-นามสกุล:</strong></p>
+          <input type="text" id="name" placeholder="ชื่อของคุณ" required><br><br>
+          <button type="button" onclick="startPrediction()">เริ่มทำนาย</button>
+        </form>
 
-  <li>
-     <a href="https://line.me/ti/p/E2lMaNn-uL" target="_blank">สนใจดูดวง19 แชทกับเราทาง LINE</a>
-  </li>
+        <div class="loading" id="loadingMessage">ตั้งจิตอธิษฐานให้มั่น กำลังทำนาย... โปรดรอสักครู่</div>
 
-  <!-- Modal for result -->
-  <div id="myModal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal()">&times;</span>
-      <h2>ผลการดูดวง</h2>
-      <p id="result"></p>
-    </div>
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>ผลการดูดวง</h2>
+            <p id="result"></p>
+          </div>
+        </div>
+
+        <p>สนับสนุนเราได้ที่ <a href="https://line.me/ti/p/E2lMaNn-uL" target="_blank">LINE ดูดวง19</a></p>
+      </div>
+    </section>
   </div>
 
+  <!-- JavaScript -->
   <script>
-    // Tarot card data
-    const tarotCards = [
-      "The Magician (จอมเวทย์)ความหมาย: ไพ่ The Magician แสดงถึงพลังที่คุณมีในการสร้างความสำเร็จและการเปลี่ยนแปลงในชีวิต โดยการใช้ทรัพยากรที่คุณมีในมือในตอนนี้ในชีวิตประจำวัน: ชี้ให้เห็นถึงการมีความสามารถในการจัดการงานต่างๆ ด้วยความคิดสร้างสรรค์และทักษะที่มีอยู่ในตัว การใช้เครื่องมือและโอกาสที่คุณมีเพื่อบรรลุเป้าหมาย",
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxP90j1SSCgbgGZRjd2NJkEcXi25XMhYWdI4jijLGG7pymSS_eVIwnOZal9KPetffw8/exec';
+
+    const tarotCards =  [ "The Magician (จอมเวทย์)ความหมาย: ไพ่ The Magician แสดงถึงพลังที่คุณมีในการสร้างความสำเร็จและการเปลี่ยนแปลงในชีวิต โดยการใช้ทรัพยากรที่คุณมีในมือในตอนนี้ในชีวิตประจำวัน: ชี้ให้เห็นถึงการมีความสามารถในการจัดการงานต่างๆ ด้วยความคิดสร้างสรรค์และทักษะที่มีอยู่ในตัว การใช้เครื่องมือและโอกาสที่คุณมีเพื่อบรรลุเป้าหมาย",
 								"The Chariot (รถม้า)ความหมาย: ไพ่ The Chariot เป็นไพ่ที่แสดงถึงการเคลื่อนไหวไปข้างหน้าและการควบคุมทิศทาง มันสะท้อนถึงพลังใจในการควบคุมสถานการณ์และการมุ่งมั่นไปสู่เป้าหมายในชีวิตประจำวัน: บ่งบอกถึงการต้องมุ่งมั่นในงานหรือภารกิจที่คุณต้องทำ การควบคุมอารมณ์และจิตใจในสถานการณ์ที่มีความท้าทาย",
 								"The Wheel of Fortune (วงล้อแห่งโชคชะตา)ความหมาย: ไพ่ The Wheel of Fortune แสดงถึงการหมุนเวียนของโชคชะตาและการเปลี่ยนแปลงที่ไม่สามารถคาดเดาได้ มันเป็นสัญญาณของการมีโชคดีหรือการเปลี่ยนแปลงที่สำคัญในชีวิตในชีวิตประจำวัน: เป็นการบอกว่าในชีวิตประจำวันของคุณอาจมีการเปลี่ยนแปลงที่ไม่คาดคิด การได้รับโอกาสใหม่ๆ หรือการพบกับสิ่งที่เปลี่ยนแปลงไปในทิศทางที่ดีขึ้น",
 								"The Hierophant (มหาพิธีกร)ความหมาย: ไพ่ The Hierophant แสดงถึงการศึกษาและการเรียนรู้จากประสบการณ์ที่มีอยู่ รวมถึงการรักษาประเพณีหรือแนวทางที่ได้รับการยอมรับจากสังคมในชีวิตประจำวัน: การทำตามกรอบหรือคำแนะนำจากผู้มีประสบการณ์ การปฏิบัติตามข้อกำหนดหรือการเรียนรู้จากสิ่งที่คนอื่นๆ เคยทำ",
@@ -229,7 +130,6 @@
 								"The Fool (ผู้ไร้เดียงสา)ความหมาย: ไพ่ The Fool แสดงถึงการเริ่มต้นใหม่ การเปิดโอกาสให้ตัวเองเติบโตและเรียนรู้จากสิ่งใหม่ๆ มันเป็นสัญลักษณ์ของความกล้าที่จะก้าวไปข้างหน้าอย่างไม่กลัวสิ่งที่ไม่รู้จักในชีวิตประจำวัน: เป็นสัญญาณของการเริ่มต้นใหม่ หรือการเปิดรับโอกาสใหม่ๆ ในชีวิต เช่น เริ่มต้นการทำงานใหม่ การเดินทาง หรือการลองทำสิ่งที่ไม่เคยทำมาก่อน",
     ];
 
-    // แก้ไขแล้ว ✅ ตรวจสอบข้อมูลก่อนทำนาย
     function startPrediction() {
       const name = document.getElementById('name').value.trim();
       const dob = document.getElementById('dob').value.trim();
@@ -241,12 +141,27 @@
 
       document.getElementById('loadingMessage').style.display = 'block';
 
-      setTimeout(function () {
+      fetch(scriptURL, {
+        method: 'POST',
+        body: JSON.stringify({ name: name, dob: dob }),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log('ส่งข้อมูลเรียบร้อย', data);
+      })
+      .catch(error => {
+        console.error('ส่งข้อมูลไม่สำเร็จ', error.message);
+      });
+
+      setTimeout(() => {
         document.getElementById('loadingMessage').style.display = 'none';
         const randomCard = tarotCards[Math.floor(Math.random() * tarotCards.length)];
         document.getElementById('result').innerText = randomCard;
         document.getElementById("myModal").style.display = "block";
-      }, 5000);
+      }, 3000);
     }
 
     function closeModal() {
@@ -259,6 +174,6 @@
       }
     }
   </script>
-
 </body>
+
 </html>
