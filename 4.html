@@ -1,131 +1,33 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="th">
 
 <head>
-		<title>Horoscope</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
-
-		<!-- Header -->
-		
-                                 <header id="header">
-        
-				 <a href="index.html" class="title">HOME</a>
-  
-	 
-			          </header>
-
-			
-		<!-- Wrapper -->
-			<div id="wrapper">
-
-				<!-- Main -->
-					<section id="main" class="wrapper">
-						<div class="inner">
-							<h1 class="major">ดวงโดยรวม</h1>
-
-							<!DOCTYPE html>
-							<html lang="th">
-							<head>
-							  <meta charset="UTF-8">
-							  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-							  <title>การดูดวงไพ่ทาโร่ต์</title>
-							  <style>
-								body {
-								  font-family: Arial, sans-serif;
-								  text-align: center;
-								  padding: 50px;
-								  background-color: #2e1160;
-								}
-								button {
-								  padding: 10px 20px;
-								  font-size: 16px;
-								  background-color: #4CAF50;
-								  color: rgb(238, 208, 208);
-								  border: none;
-								  cursor: pointer;
-								  margin-top: 20px;
-								}
-								button:hover {
-								  background-color: #45a049;
-								}
-							
-								/* สไตล์ของ Modal */
-								.modal {
-								  display: none; /* เริ่มต้นไม่ให้แสดง */
-								  position: fixed; /* อยู่ตำแหน่งคงที่ */
-								  z-index: 1; /* ทำให้ Modal อยู่ด้านบนสุด */
-								  left: 0;
-								  top: 0;
-								  width: 100%;
-								  height: 100%;
-								  background-color: rgba(0, 0, 0, 0.4); /* พื้นหลังมืด */
-								  overflow: auto;
-								  padding-top: 60px;
-								}
-							
-								/* สไตล์ของ Modal Content */
-								.modal-content {
-								  background-color: #511c5e;
-								  margin: 5% auto;
-								  padding: 20px;
-								  border: 1px solid #adbc5a;
-								  width: 80%;
-								  max-width: 500px;
-								}
-							
-								/* ปุ่มปิด */
-								.close {
-								  color: #aaa;
-								  float: right;
-								  font-size: 28px;
-								  font-weight: bold;
-								}
-							
-								.close:hover,
-								.close:focus {
-								  color: black;
-								  text-decoration: none;
-								  cursor: pointer;
-								}
-							  </style>
-							  
-							</head>
-
-
-
-
-
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
   <title>Horoscope</title>
+  <link rel="stylesheet" href="assets/css/main.css" />
   <style>
     body {
       font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 50px;
       background-color: #2e1160;
+      color: white;
+      text-align: center;
     }
+
     button {
-     padding: 4px 20px;
-      font-size: 11px;
+      padding: 10px 20px;
+      font-size: 16px;
       background-color: #d529d5;
       color: white;
       border: none;
       cursor: pointer;
       margin-top: 20px;
     }
+
     button:hover {
       background-color: #f01a29;
     }
 
-    /* Modal styles */
     .modal {
       display: none;
       position: fixed;
@@ -157,48 +59,56 @@
 
     .close:hover,
     .close:focus {
-      color: black;
-      text-decoration: none;
+      color: white;
       cursor: pointer;
     }
 
     .loading {
       display: none;
-      font-size: 20px;
-      color: rgb(216, 88, 150);
+      font-size: 18px;
+      color: #f0c;
       margin-top: 20px;
     }
   </style>
 </head>
-<body>
 
-  <h2>การดูดวงไพ่ทาโร่ต์</h2>
-  <p>กรุณากรอกข้อมูลของคุณเพื่อเริ่มการทำนาย</p>
+<body class="is-preload">
 
-  <!-- Form to enter name and birthdate -->
-  <form id="horoscopeForm"> 
-    
-    <P>
-  <h4>กรุณากรอกข้อมูลวันเดือนปีเกิด</h4>
-</P>
-    <input type="date" id="dob" required   >
+  <!-- Header -->
+  <header id="header">
+    <a href="index.html" class="title">HOME</a>
+ 
+  </header>
 
-<P>
-  <h4>กรุณากรอกข้อมูล ชื่อ นามสกุล</h4>
-</P>
-    <input type="text" id="name" placeholder="ชื่อของคุณ" required><br><br>
+  <!-- Main Wrapper -->
+  <div id="wrapper">
+    <section id="main" class="wrapper">
+      <div class="inner">
+        <h1 class="major">ดูดวงโดยรวม</h1>
 
-	  
-    <button type="button" onclick="startPrediction()">เริ่มทำนาย</button>
-  </form>
-	
-<div class="loading" id="loadingMessage">ตั้งจิตอธิษฐานให้มั่น กำลังทำนาย... โปรดรอสักครู่ </div>
-  <li><a href="elements.html">ท่านสามารถสนับสนุนเราได้</a></li>
+        <p>กรุณากรอกข้อมูลของคุณเพื่อเริ่มการทำนาย</p>
+        <form id="horoscopeForm">
+          <p><strong>วันเดือนปีเกิด:</strong></p>
+          <input type="date" id="dob" required><br>
+          <p><strong>ชื่อ-นามสกุล:</strong></p>
+          <input type="text" id="name" placeholder="ชื่อของคุณ" required><br><br>
+          <button type="button" onclick="startPrediction()">เริ่มทำนาย</button>
+        </form>
 
-  <li>
-     <a href="https://line.me/ti/p/E2lMaNn-uL" target="_blank">สนใจดูดวง19 แชทกับเราทาง LINE</a>
-  </li>
+        <div class="loading" id="loadingMessage">ตั้งจิตอธิษฐานให้มั่น กำลังทำนาย... โปรดรอสักครู่</div>
 
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>ผลการดูดวง</h2>
+            <p id="result"></p>
+          </div>
+        </div>
+
+        <p>สนับสนุนเราได้ที่ <a href="https://line.me/ti/p/E2lMaNn-uL" target="_blank">LINE ดูดวง19</a></p>
+      </div>
+    </section>
+  </div>
   <!-- Modal for result -->
   <div id="myModal" class="modal">
     <div class="modal-content">
